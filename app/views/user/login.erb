@@ -1,0 +1,31 @@
+<!--<h1>로그인!!</h1>-->
+<!--<form action="/user/login_process" method="post">-->
+<!--    이 메 일 : <input type="text" name="email"><br>-->
+<!--    비밀번호 : <input type="text" name="password"><br>-->
+<!--    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">-->
+<!--    <input type="submit" value="로그인">-->
+<!--</form>-->
+<h1>로그인</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+      <div class="col-12 col-lg-6">
+        <h1>LOGIN</h1>
+        <form action="/user/login_process" method="post">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+          </div>
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token() %>">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col-lg-3">
+    </div>
+  </div>
+</div>  

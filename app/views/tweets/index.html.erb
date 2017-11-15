@@ -1,0 +1,10 @@
+<h1>Tweets 목록</h1>
+<% @tweets.each do |t| %>
+<p>
+    <%= t.content %>
+    <a href="/tweets/<%= t.id %>/edit">[수정]</a>
+    <%= link_to("[삭제]", "tweets/#{t.id}", method: "delete")%>
+</p>
+<% end %>
+<a href="/tweets/new">TWEET!!</a>
+<%= link_to("게시판가기", "/post/index", method: "post")%> <!--dlfma링크 갈곳 방법-->
